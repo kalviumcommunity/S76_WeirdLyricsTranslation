@@ -1,5 +1,5 @@
 
-Project Title : Wierd lyrics translation
+Project Title : Weird lyrics translation
 
 Project Overview : This project takes original song lyrics and translates them into even weirder, funnier versions. The goal is to make listeners laugh by twisting the original lyrics into absurd, unexpected, or downright ridiculous meanings while keeping the essence of the song. Goals: Create Hilarious Translations: Rewrite the lyrics into exaggerated or funny versions, turning them into something totally unexpected. Share for Entertainment: Post the translations on social media, in videos, or as memes to entertain and get reactions from others
 
