@@ -1,0 +1,11 @@
+{
+  "name": "s76_weirdlyricstranslation",
+  "version": "1.0.0",
+  "description": "translating original  song lyrics to funny , weirdier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nandhini",
+  "license": "ISC"
+}
