@@ -9,6 +9,5 @@ const connectDatabase = () => {
       console.log(`MongoDB Connection Failed ❌: ${err.message}`);
       process.exit(1);
     });
-  
 };
 module.exports = connectDatabase;
