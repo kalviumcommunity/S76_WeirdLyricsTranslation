@@ -28,6 +28,18 @@ app.get('/ping', (req, res) => {
     res.send('Pong!');
 });
 
+
+const routes = require('./routes');
+
+
+
+// Middleware to parse JSON request bodies
+app.use(express.json());
+
+// Use the routes defined in routes.js
+app.use('/', routes);
+
+
 // Start server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
