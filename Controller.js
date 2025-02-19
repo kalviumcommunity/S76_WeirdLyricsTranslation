@@ -43,6 +43,5 @@ const deleteItem = async (req, res) => {
   await deletedItem.deleteOne();
   res.status(200).json({ message: "Item deleted" }); // Return a success message with a 200 status code
 };
-
 // Export the functions to use in routes
 module.exports = { createItem, getItem, updateItem, deleteItem };

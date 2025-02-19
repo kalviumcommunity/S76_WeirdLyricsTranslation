@@ -19,7 +19,6 @@ const lyricsSchema = new Schema({
         required: true
     }
 });
-
 const model = mongoose.model('Lyrics', lyricsSchema);
 
 module.exports = model;
