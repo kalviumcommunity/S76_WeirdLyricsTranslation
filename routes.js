@@ -1,12 +1,11 @@
-// routes.js
 const express = require('express');
 const router = express.Router();
-const { createItem, getItem, updateItem, deleteItem } = require('./Controller.js');
+const userController = require('./postcontroller'); 
+// 🛠 User Routes
+router.post('/users', userController.createUsers);       // Create a user
+router.get('/users', userController.getAllUsers);       // Get all users
+router.get('/users/:id', userController.getUserById);   // Get a user by ID
+router.put('/users/:id', userController.updateUser);    // Update a user
+router.delete('/users/:id', userController.deleteUser); // Delete a user
 
-// CRUD Routes
-router.post('/items', createItem); // Create an item
-router.get('/items/:id', getItem); // Get an item by ID
-router.put('/items/:id', updateItem); // Update an item by ID
-router.delete('/items/:id', deleteItem); // Delete an item by ID
-// Export the router to use in server.js
-module.exports = router; 
+module.exports = router;

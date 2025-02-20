@@ -1,46 +1,29 @@
 require('dotenv').config();
 
 const express = require('express');
+const cors = require('cors');
+const { connectDatabase, getConnection } = require('./database');
+const userRoutes = require('./routes');
 const app = express();
 const port = process.env.PORT || 3000;
-const connectDatabase = require('./database');
 
-let dbConnectionStatus = 'Disconnected';
+app.use(express.json());
+app.use(cors());
 
-// Connect to MongoDB
-connectDatabase()
-    .then(() => {
-        dbConnectionStatus = 'Connected to database';
-        console.log(dbConnectionStatus);
-    })
-    .catch(err => {
-        dbConnectionStatus = `Error connecting to database: ${err.message}`;
-        console.error(dbConnectionStatus);
-    });
-
-// Route to check database connection status
-app.get('/', (req, res) => {
-    res.json({ message: dbConnectionStatus });
-});
-
-// Test route
 app.get('/ping', (req, res) => {
     res.send('Pong!');
 });
 
+connectDatabase();
 
-const routes = require('./routes');
+app.get('/', (req, res) => {
+    console.log('Connected');
+    res.json({ message: getConnection() });
+});
 
+// Use user routes
+app.use('/api', userRoutes);
 
-
-// Middleware to parse JSON request bodies
-app.use(express.json());
-
-// Use the routes defined in routes.js
-app.use('/', routes);
-
-
-// Start server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server is running at http://localhost:${port}`);
 });
