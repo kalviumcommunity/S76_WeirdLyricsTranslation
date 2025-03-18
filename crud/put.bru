@@ -1,0 +1,26 @@
+meta {
+  name: put
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/api/users/67b7147494b874d5c64dda37
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "User updated successfully!",
+    "user": {
+      "_id": "67b7147494b874d5c64dda37",
+      "username": "john",
+      "email": "john.doe@example.com",
+      "password": "hashedpassword123",
+      "role": "user",
+      "createdAt": "2024-02-20T10:30:00.000Z",
+      "__v": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+meta {
+  name: api
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/users
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "password": "hashedpassword123",
+      "role": "user",
+      "createdAt": "2024-02-20T10:30:00Z"
+    },
+    {
+      "username": "admin_user",
+      "email": "admin@example.com",
+      "password": "hashedpassword456",
+      "role": "admin",
+      "createdAt": "2024-02-19T15:45:00Z"
+    },
+    {
+      "username": "jane_smith",
+      "email": "jane.smith@example.com",
+      "password": "hashedpassword789",
+      "role": "user",
+      "createdAt": "2024-02-18T08:20:00Z"
+    }
+  ]
+  
+}
