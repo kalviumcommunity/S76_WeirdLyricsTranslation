@@ -38,4 +38,6 @@ It's a fun, useful project that helps people connect with music better!
 
 ## https://s76-list-of-weird-myths.onrender.com/ping
 
+
+Frontend Deployment 
 https://iridescent-selkie-030727.netlify.app/ 
